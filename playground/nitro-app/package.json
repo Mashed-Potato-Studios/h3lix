@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "prepare": "nitro prepare",
+    "preview": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nitropack": "latest"
+  },
+  "dependencies": {
+    "h3lix": "link:/Users/vantolbennett/Developer/Mashed_Potato_Studios/h3lix"
+  }
+}

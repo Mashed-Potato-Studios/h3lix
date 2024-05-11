@@ -1,0 +1,19 @@
+{
+  "name": "h3lix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "h3": "^1.11.1",
+    "listhen": "^1.7.2",
+    "mongoose": "^8.3.2",
+    "nitropack": "^2.9.6",
+    "nodemailer": "^6.9.13"
+  }
+}
