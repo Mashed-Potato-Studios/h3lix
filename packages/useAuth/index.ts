@@ -1,3 +1,4 @@
+import { defineEventHandler, H3Event, readBody } from 'h3';
 import * as mongoose from 'mongoose';
 import * as sqlClient from 'your-sql-client'; // Replace with your actual SQL client
 
@@ -25,7 +26,14 @@ async function login(email: string, password: string, dbType: string) {
 }
 
 
-export function useAuth(email: string, password: string, fn: () => Promise<any>) {
+export const useAuth = defineEventHandler(async (event: H3Event): Promise<void> => {
+    
+    const dbType = event.context.dbType;
+    const data = await readBody<{ email: string; password: string }>(event);
 
+    // Add your function logic here
+    const { email, password } = data;
 
-}
+    // Call the login function with the appropriate parameters
+    await login(email, password, dbType);
+})
